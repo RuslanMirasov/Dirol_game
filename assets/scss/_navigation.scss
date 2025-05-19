@@ -1,0 +1,28 @@
+.navigation {
+  text-align: center;
+
+  ul {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 40px;
+
+    li {
+      width: 100%;
+    }
+  }
+
+  .button {
+    margin-top: 70px;
+  }
+}
+
+.navigation__link {
+  font-family: var(--900);
+  text-transform: uppercase;
+  color: var(--color);
+}

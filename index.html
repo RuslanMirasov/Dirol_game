@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Заголовок страницы" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+    <title>Заголовок страницы</title>
+  </head>
+  <body class="body">
+    <main class="main">
+      <h1 hidden>Скрытый заголовок для SEO</h1>
+
+      <nav class="navigation">
+        <ul>
+          <li><a href="./about" class="navigation__link">об акции</a></li>
+          <li><a href="./prizes" class="navigation__link">призы</a></li>
+          <li><a href="./lk" class="navigation__link">личный кабинет</a></li>
+          <li><a href="./winners" class="navigation__link">победители</a></li>
+        </ul>
+
+        <button class="button">Загрузить чек</button>
+      </nav>
+    </main>
+    <!--
+      <label class="label">
+        <input type="checkbox" name="policy" class="checkbox" />
+        <span>
+          Я соглашаюсь с&nbsp;полными <a href="./../assets/pdf/agree.pdf" target="_blank">правилами акции</a> и&nbsp;подтверждаю, что являюсь
+          совершеннолетним гражданином РФ
+        </span>
+      </label>
+
+      <label class="label">
+        <input type="checkbox" name="agree" class="checkbox" />
+        <span>
+          Я согласен(на) на <a href="./../assets/pdf/policy.pdf" target="_blank">обработку персональных данных</a> и&nbsp;получение рассылок по
+          e-mail и&nbsp;sms, на&nbsp;условиях, указанных в&nbsp;<a href="./../assets/pdf/agree.pdf" target="_blank">Правилах акции</a>.
+        </span>
+      </label> -->
+
+    <!--POPUPS-->
+    <div class="backdrop" data-backdrop>
+      <div class="popup" data-popup>
+        <div class="popup-content" id="login">
+          <button class="popup-close" data-popup-close></button>
+          <menu class="login-menu">
+            <li class="login-menu__link"><a href="./../signup">Регистрация</a></li>
+            <li>|</li>
+            <li class="login-menu__link active"><a href="./../signin">Вход</a></li>
+          </menu>
+          <form action="#" class="form form--login" novalidate>
+            <label class="label">
+              <input type="email" name="email" class="input" required />
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/forms.js" type="module"></script>
+    <script src="./assets/js/scripts.js" type="module"></script>
+  </body>
+</html>

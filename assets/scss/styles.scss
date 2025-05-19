@@ -1,0 +1,31 @@
+:root {
+  --900: '5kasansdesign-black', sans-serif;
+  --600: '5kasansdesign-semibold', sans-serif;
+  --400: '5kasansdesign-regular', sans-serif;
+  --250: '5kasansdesign-thin', sans-serif;
+  --intro: 'intro', sans-serif;
+
+  --bg: #ffffff;
+  --white: #ffffff;
+  --color: #333333;
+  --black: #333333;
+  --grey: #d5d5d5;
+  --red: #e6193a;
+  --invalid: #ff002b;
+}
+
+@import 'mixins';
+@import 'fonts';
+@import 'reset';
+@import 'navigation';
+@import 'swiper';
+@import 'buttons';
+@import 'typography';
+@import 'section__about';
+@import 'section__prizes';
+@import 'section__lk';
+@import 'section__winners';
+@import 'section__form';
+@import 'footer';
+@import 'forms';
+@import 'popup';
