@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./../assets/img/favicon.ico" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="description" content="Уровень 1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,6 +16,7 @@
     </section>
 
     <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script>
+
     <script>
       window.addEventListener('load', () => {
         const el = document.querySelector('[data-zoom]');
@@ -28,17 +29,14 @@
           contain: 'outside',
         });
 
-        document.body.addEventListener('wheel', panzoom.zoomWithWheel);
+        el.addEventListener('wheel', panzoom.zoomWithWheel, { passive: false });
 
-        // Надёжный способ — 2 rAF после загрузки
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
             const container = document.body;
-            const scale = panzoom.getScale(); // обычно = 1
-
+            const scale = panzoom.getScale();
             const panX = (el.offsetWidth * scale - container.clientWidth) / -2;
             const panY = (el.offsetHeight * scale - container.clientHeight) / -2;
-
             panzoom.pan(panX, panY);
           });
         });
