@@ -1,0 +1,113 @@
+.section--rules {
+  padding: 40px 10px 20px 10px;
+  font-size: 16px;
+  color: var(--white);
+}
+
+.rules {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 375px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 18px;
+  > li {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
+    gap: 4px 12px;
+    text-align: center;
+    p {
+      display: block;
+      width: 100%;
+    }
+
+    > ul {
+      display: inline-flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      gap: 10px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      li {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 50.22px;
+        height: 50.22px;
+        border-radius: 50.22px;
+        background: var(--white);
+      }
+    }
+
+    &:before {
+      content: '';
+      width: 38px;
+      height: 52px;
+      position: absolute;
+      bottom: -8px;
+      background: url('../img/svg/arrow_rules.svg') no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+    &:nth-child(1) {
+      max-width: 262px;
+      margin-right: auto;
+      margin-left: 10px;
+      padding: 35px 13px 8px 8px;
+      background: url('../img/svg/rule1.svg') no-repeat center center;
+      background-size: 100% 100%;
+      &:before {
+        left: 100%;
+        margin-left: 10px;
+      }
+    }
+    &:nth-child(2) {
+      max-width: 274px;
+      margin-left: auto;
+      padding: 10px;
+      background: url('../img/svg/rule2.svg') no-repeat center center;
+      background-size: 100% 100%;
+      &:before {
+        right: 100%;
+        transform: scaleX(-1);
+      }
+    }
+    &:nth-child(3) {
+      max-width: 209px;
+      margin-right: auto;
+      margin-left: 10px;
+      padding: 15px 62px 18px 18px;
+      background: url('../img/svg/rule3.svg') no-repeat center center;
+      background-size: 100% 100%;
+      &:before {
+        left: 100%;
+        margin-left: -10px;
+      }
+      img {
+        position: absolute;
+        right: 22px;
+        bottom: 8px;
+      }
+    }
+    &:nth-child(4) {
+      padding: 20px 6px 10px 6px;
+      background: url('../img/svg/rule4.svg') no-repeat center center;
+      background-size: 100% 100%;
+      &:before {
+        content: none;
+      }
+    }
+  }
+}

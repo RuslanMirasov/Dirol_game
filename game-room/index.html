@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Игра" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./../assets/css/styles.min.css" />
+    <title>Игра</title>
+  </head>
+  <body class="body">
+    <main class="main">
+      <h1 hidden>Игра</h1>
+
+      <section class="section section--game">
+        <div class="timer">
+          <span data-timer>00:23,345</span>
+        </div>
+        <iframe src="./../level-1" frameborder="0" class="level-iframe"></iframe>
+      </section>
+
+      <nav class="game-panel">
+        <p class="game-panel__score"><span>199 место</span></p>
+        <ul class="game-panel__counters">
+          <li>
+            <picture>
+              <img src="./../assets/img/game/1.webp" alt="" />
+            </picture>
+            <span>2/15</span>
+          </li>
+          <li>
+            <picture>
+              <img src="./../assets/img/game/2.webp" alt="" />
+            </picture>
+            <span>4/15</span>
+          </li>
+          <li>
+            <picture>
+              <img src="./../assets/img/game/3.webp" alt="" />
+            </picture>
+            <span>3/15</span>
+          </li>
+          <li>
+            <picture>
+              <img src="./../assets/img/game/4.webp" alt="" />
+            </picture>
+            <span>7/15</span>
+          </li>
+        </ul>
+        <footer class="footer">
+          <a href="#">Вернуться в розыгрыш</a>
+          <button class="sound-button" data-sound="./../assets/music/game.mp3"></button>
+        </footer>
+      </nav>
+    </main>
+
+    <script src="./../assets/js/scripts.js" type="module"></script>
+  </body>
+</html>

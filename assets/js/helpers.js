@@ -1,47 +1,53 @@
-export const throttle = (func, limit) => {
-  let lastCall = 0;
-  return function (...args) {
-    const now = Date.now();
-    if (now - lastCall >= limit) {
-      lastCall = now;
-      func.apply(this, args);
+// ВКЛ/ВЫКЛ Звука
+export const soundToggle = () => {
+  const soundBtn = document.querySelector('[data-sound]');
+  if (!soundBtn) return;
+
+  const soundPath = soundBtn.getAttribute('data-sound');
+  const audio = new Audio(soundPath);
+  audio.loop = true;
+  audio.volume = 1;
+
+  let isPlaying = false;
+
+  const handleSoundToggle = () => {
+    if (!isPlaying) {
+      audio
+        .play()
+        .then(() => {
+          isPlaying = true;
+          soundBtn.classList.add('is-playing');
+        })
+        .catch(err => {
+          console.warn('Ошибка при воспроизведении:', err);
+        });
+    } else {
+      audio.pause();
+      isPlaying = false;
+      soundBtn.classList.remove('is-playing');
     }
   };
+
+  soundBtn.addEventListener('click', handleSoundToggle);
 };
 
-export const debounce = (func, delay) => {
-  let timeoutId;
-  return function (...args) {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => {
-      func.apply(this, args);
-    }, delay);
-  };
-};
+// ТАЙМЕР МИЛИСЕКУНД
+export const startMillisecondTimer = () => {
+  const timerEl = document.querySelector('[data-timer]');
+  if (!timerEl) return;
 
-export const passwordToggle = () => {
-  const passwords = document.querySelectorAll('[data-password]');
+  const startTime = Date.now();
 
-  if (!passwords || passwords.langth === 0) return;
+  const update = () => {
+    const elapsed = Date.now() - startTime;
 
-  const handlePasswordToggle = e => {
-    e.preventDefault();
-    const icon = e.currentTarget.querySelector('img');
-    const iconUrl = icon.src.split('password');
-    const input = e.currentTarget.closest('.password-wrapper').querySelector('input[name="password"]');
+    const minutes = String(Math.floor(elapsed / 60000)).padStart(2, '0');
+    const seconds = String(Math.floor((elapsed % 60000) / 1000)).padStart(2, '0');
+    const milliseconds = String(elapsed % 1000).padStart(3, '0');
 
-    if (!icon || !input) return;
-
-    if (iconUrl[1].includes('2.svg')) {
-      icon.src = `${iconUrl[0]}password.svg`;
-      input.type = 'text';
-      return;
-    }
-
-    icon.src = `${iconUrl[0]}password2.svg`;
-    input.type = 'password';
-    // console.log(icon.src);
+    timerEl.textContent = `${minutes}:${seconds},${milliseconds}`;
+    requestAnimationFrame(update);
   };
 
-  passwords.forEach(password => password.addEventListener('click', handlePasswordToggle));
+  requestAnimationFrame(update);
 };

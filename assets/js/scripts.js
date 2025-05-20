@@ -1,8 +1,12 @@
-import { popup } from './popup.js';
-import { initSliders } from './sliders.js';
-import { passwordToggle } from './helpers.js';
+import { soundToggle, startMillisecondTimer } from './helpers.js';
 
-popup.init();
-window.popup = popup;
-initSliders();
-passwordToggle();
+document.addEventListener('gesturestart', function (e) {
+  if (!e.target.closest('iframe')) {
+    e.preventDefault();
+  }
+});
+
+window.addEventListener('load', () => {
+  soundToggle();
+  startMillisecondTimer();
+});

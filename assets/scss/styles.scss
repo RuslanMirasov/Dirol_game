@@ -1,15 +1,16 @@
 :root {
-  --900: '5kasansdesign-black', sans-serif;
-  --600: '5kasansdesign-semibold', sans-serif;
-  --400: '5kasansdesign-regular', sans-serif;
-  --250: '5kasansdesign-thin', sans-serif;
-  --intro: 'intro', sans-serif;
+  --regular: 'montserrat-regular', sans-serif;
+  --bold: 'epilepsysans-bold', sans-serif;
+  --700: 'songerse-bold', sans-serif;
+  --400: 'songerse-regular', sans-serif;
 
-  --bg: #ffffff;
+  --bg: #316bc0;
   --white: #ffffff;
-  --color: #333333;
-  --black: #333333;
-  --grey: #d5d5d5;
+  --color: #3b2164;
+  --yellow: #fde989;
+  --yellow-dark: #f3cd02;
+  --black: #000000;
+  --grey: #f0f1f1;
   --red: #e6193a;
   --invalid: #ff002b;
 }
@@ -18,14 +19,10 @@
 @import 'fonts';
 @import 'reset';
 @import 'navigation';
-@import 'swiper';
 @import 'buttons';
 @import 'typography';
-@import 'section__about';
-@import 'section__prizes';
-@import 'section__lk';
-@import 'section__winners';
-@import 'section__form';
+@import 'section__main';
+@import 'section__rules';
+@import 'section__gameroom';
+@import 'section__level';
 @import 'footer';
-@import 'forms';
-@import 'popup';
