@@ -274,6 +274,13 @@ iframe::-webkit-scrollbar {
 .button.small {
   font-size: 28px;
   min-height: 50px;
+  padding: 10px 20px;
+}
+@media (max-width: 359px) {
+  .button.small {
+    padding: 10px 10px;
+    font-size: 26px;
+  }
 }
 
 .title {
@@ -292,6 +299,11 @@ iframe::-webkit-scrollbar {
 }
 .title.title--h2 {
   font-size: 28px;
+}
+@media (max-width: 359px) {
+  .title.title--h2 {
+    font-size: 26px;
+  }
 }
 
 .section--main {
@@ -589,6 +601,85 @@ iframe::-webkit-scrollbar {
   height: 100%;
   background: url("../img/levels/1.webp") no-repeat center center;
   background-size: 100% 100%;
+}
+
+.section--scores {
+  max-width: 450px;
+  padding: 40px 16px 32px 16px;
+}
+@media (max-width: 359px) {
+  .section--scores {
+    padding: 40px 12px 32px 12px;
+  }
+}
+.section--scores .title {
+  margin-bottom: 20px;
+}
+
+.scores,
+.results {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 14px;
+  font-family: var(--400);
+  color: var(--white);
+  font-weight: 400;
+}
+.scores img,
+.results img {
+  margin: 0 auto;
+}
+.scores tr,
+.results tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.scores tr.you,
+.results tr.you {
+  background: var(--color);
+}
+.scores thead tr,
+.results thead tr {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.scores thead tr:last-child,
+.results thead tr:last-child {
+  background: rgba(59, 33, 100, 0.5);
+}
+.scores th,
+.results th {
+  font-size: 12px;
+  padding: 9px 4px;
+  opacity: 0.8;
+}
+@media (max-width: 359px) {
+  .scores th,
+.results th {
+    font-size: 11px;
+  }
+}
+.scores td,
+.results td {
+  font-size: 14px;
+  padding: 9px 4px;
+}
+@media (max-width: 374px) {
+  .scores td,
+.results td {
+    font-size: 14px;
+    padding: 9px 2px;
+  }
+}
+@media (max-width: 359px) {
+  .scores td,
+.results td {
+    font-size: 12px;
+  }
+}
+
+.results td:nth-child(2),
+.results th:nth-child(2) {
+  text-align: left;
 }
 
 .footer {

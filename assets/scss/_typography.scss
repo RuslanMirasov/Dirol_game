@@ -15,5 +15,8 @@
 
   &.title--h2 {
     font-size: 28px;
+    @media (max-width: 359px) {
+      font-size: 26px;
+    }
   }
 }

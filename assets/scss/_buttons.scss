@@ -33,5 +33,10 @@
   &.small {
     font-size: 28px;
     min-height: 50px;
+    padding: 10px 20px;
+    @media (max-width: 359px) {
+      padding: 10px 10px;
+      font-size: 26px;
+    }
   }
 }
