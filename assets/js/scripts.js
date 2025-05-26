@@ -1,3 +1,4 @@
+import { popup } from './popup.js';
 import { soundToggle, startMillisecondTimer } from './helpers.js';
 
 document.addEventListener('gesturestart', function (e) {
@@ -7,6 +8,8 @@ document.addEventListener('gesturestart', function (e) {
 });
 
 window.addEventListener('load', () => {
+  popup.init();
+  window.popup = popup;
   soundToggle();
   startMillisecondTimer();
 });

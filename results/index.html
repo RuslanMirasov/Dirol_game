@@ -102,12 +102,35 @@
       <nav class="navigation navigation--light">
         <ul>
           <li><a href="./../game-room" class="button button--white small">Играть еще раз</a></li>
-          <li><a href="./../game-room" class="button button--white small">Как получить приз</a></li>
+          <li><button class="button button--white small" data-popup-open="how_to_get">Как получить приз</button></li>
         </ul>
         <footer class="footer">
           <a href="#">Вернуться в розыгрыш</a>
         </footer>
       </nav>
     </main>
+
+    <!--POPUPS-->
+    <div class="backdrop" data-backdrop>
+      <div class="popup" data-popup>
+        <!--Как получить приз-->
+        <div class="popup-content" id="how_to_get">
+          <button class="popup-close" data-popup-close></button>
+          <p class="popup__subtitle">
+            В период с&nbsp;18.06.25&nbsp;г. <br />по&nbsp;09.09.25&nbsp;г. приобретайте продукцию «Dirol», «Picnic», «Halls» от&nbsp;100&nbsp;р.
+            в&nbsp;«Магнит у&nbsp;дома», «Магнит Семейный», «Магнит Экстра», «Магнит Опт», в&nbsp;разделе «Доставка» мобильного приложения,
+            активировав участие в&nbsp;Акции в&nbsp;клубе «pro.здоровые привычки», и&nbsp;становитесь участником розыгрыша еженедельных призов
+            и&nbsp;главного приза. Для участия в&nbsp;розыгрыше специального приза принимайте участие в&nbsp;игре «Открой призовую реальность»
+            и&nbsp;занимайте место в&nbsp;ТОП-10 рейтинга.
+          </p>
+          <p class="popup__subtitle">
+            Количество призов и&nbsp;акционных товаров ограничено. Подробности об&nbsp;организаторе акции, количестве призов, сроках, месте
+            и&nbsp;порядке их получения в&nbsp;Правилах Акции в&nbsp;клубе «pro.здоровые привычки» мобильного приложения.
+          </p>
+          <button class="button button--small full" data-popup-close>Закрыть</button>
+        </div>
+      </div>
+    </div>
+    <script src="./../assets/js/scripts.js" type="module"></script>
   </body>
 </html>
