@@ -692,6 +692,7 @@ iframe::-webkit-scrollbar {
   left: 0px;
   top: 0px;
   z-index: 1;
+  border: none;
 }
 
 .body.body--level {
