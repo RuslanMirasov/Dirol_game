@@ -1,4 +1,5 @@
 import { popup } from './popup.js';
+import { initSelectFields } from './select.js';
 import { soundToggle, startMillisecondTimer } from './helpers.js';
 
 document.addEventListener('gesturestart', function (e) {
@@ -12,4 +13,5 @@ window.addEventListener('load', () => {
   window.popup = popup;
   soundToggle();
   startMillisecondTimer();
+  initSelectFields();
 });

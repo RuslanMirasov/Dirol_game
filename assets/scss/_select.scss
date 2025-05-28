@@ -1,0 +1,120 @@
+// Главный контейнер компонента
+.choices {
+  background: none;
+  border-radius: 14px;
+  width: 280px;
+  height: 28px !important;
+  background: #7fa9e7;
+  text-align: center;
+  border: none;
+  margin: 0;
+  margin-bottom: 13px;
+  &.is-open {
+    border-radius: 14px 14px 0px 0px;
+  }
+}
+.choices[data-type*='select-one'] .choices__input {
+  padding: 0;
+  border-bottom: none;
+  background-color: none;
+  margin: 0;
+}
+// Видимая часть select (заголовок)
+.choices__inner {
+  width: 280px;
+
+  border: none;
+  padding: 0;
+  border-radius: 0px 0px 14px 14px;
+  background: none;
+  font-size: 14px;
+  font-family: var(--400);
+  font-weight: 400;
+  color: var(--color);
+  overflow: hidden;
+}
+
+// Обёртка для списка опций
+.choices__list {
+  border: none !important;
+
+  overflow: hidden;
+  padding: 0px;
+  background: none;
+  &.choices__list--single {
+    background: none !important;
+    // ТУТ ДЕЛАТЬ КАЛЕНДАЛЬ
+    padding: 0;
+
+    height: 28px;
+    > .choices__item {
+      padding: 5px !important;
+      height: 28px;
+      margin-top: 0;
+    }
+  }
+}
+
+// Выпадающий список
+.choices__list--dropdown {
+  border-radius: 0px 0px 14px 14px !important;
+  border: none !important;
+  font-size: 14px;
+  font-family: var(--400);
+  font-weight: 400;
+  color: var(--color);
+  text-align: center;
+  background: #7fa9e7 !important;
+  &.is-active {
+    background: none;
+  }
+}
+
+// Элемент внутри списка
+.choices__item {
+  padding: 8px !important;
+  background: none !important;
+  box-shadow: none;
+  width: calc(100% - 24px);
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  &.choices__item--selectable {
+    padding: 0;
+  }
+  &:first-child {
+    margin-top: 5px;
+  }
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 5px;
+  }
+  &:before,
+  &:after {
+    content: none !important;
+  }
+}
+
+.choices[data-type*='select-one']::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  background: url('../img/svg/calendar.svg') no-repeat center center;
+}
+.choices[data-type*='select-one']::after {
+  width: 24px;
+  height: 24px;
+  border: none !important;
+  margin: 0 !important;
+  top: 2px;
+  right: 6px;
+  background: url('../img/svg/select.svg') no-repeat center center;
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: 0.3s;
+}
+
+.choices.is-open[data-type*='select-one']::after {
+  transform: translate(0px, 0px) rotate(180deg);
+}

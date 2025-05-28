@@ -1,11 +1,11 @@
 .section--scores {
   max-width: 450px;
-  padding: 40px 16px 32px 16px;
+  padding: 20px 16px 20px 16px;
   @media (max-width: 359px) {
     padding: 40px 12px 32px 12px;
   }
   .title {
-    margin-bottom: 20px;
+    margin-bottom: 13px;
   }
 }
 
@@ -39,15 +39,15 @@
 
   th {
     font-size: 12px;
-    padding: 9px 4px;
+    padding: 6px 4px;
     opacity: 0.8;
     @media (max-width: 359px) {
       font-size: 11px;
     }
   }
   td {
-    font-size: 14px;
-    padding: 9px 4px;
+    font-size: 13px;
+    padding: 6px 4px;
     @media (max-width: 374px) {
       font-size: 14px;
       padding: 9px 2px;
