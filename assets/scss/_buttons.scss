@@ -3,12 +3,12 @@
   gap: 20px;
   overflow: hidden;
   z-index: 1;
-  min-height: 55px;
+  min-height: 50px;
   justify-content: center;
   align-items: center;
   align-content: center;
   position: relative;
-  font-size: 35px;
+  font-size: 28px;
   line-height: 1;
   color: var(--white);
   font-family: var(--bold);
@@ -31,8 +31,8 @@
   }
 
   &.small {
-    font-size: 28px;
-    min-height: 50px;
+    font-size: 24px;
+    min-height: 40px;
     padding: 10px 20px;
     @media (max-width: 359px) {
       padding: 10px 10px;

@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   max-width: 450px;
-  padding: 45px 20px 16px 20px;
+  padding: 40px 20px 12px 20px;
   &.navigation--main {
     &:before {
       content: '';
@@ -40,8 +40,8 @@
       display: block;
       position: relative;
       width: 100%;
-      font-size: 18px;
-      line-height: 1.4;
+      font-size: 16px;
+      line-height: 1.2;
 
       &.have-arrow {
         position: relative;
@@ -52,10 +52,10 @@
           left: 50%;
           margin-left: -9px;
           top: 100%;
-          width: 18px;
-          height: 18px;
-          margin-top: -4px;
-          background: url('../img/svg/arrow_down.svg') no-repeat center center;
+          width: 14px;
+          height: 14px;
+          margin-top: -2px;
+          background: url('../img/svg/arrow_down.svg') no-repeat center center/cover;
         }
       }
       .button {

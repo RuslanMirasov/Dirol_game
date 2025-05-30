@@ -1,12 +1,32 @@
 .section--main {
-  margin-bottom: -110px;
+  margin-bottom: 0px;
   justify-content: flex-end;
-  max-width: 450px;
-  background: url('../img/main/bg.webp') no-repeat center bottom;
+  max-width: 100%;
+  background: linear-gradient(180deg, #0257aa 0%, #23a0f5 70%);
   background-size: 134% auto;
 
   .title {
-    margin-top: 50px;
-    margin-bottom: 124%;
+    display: flex;
+    flex: 1;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 20px;
+    padding-bottom: 280px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    position: absolute;
+    background: url('../img/main/bg.png') no-repeat center bottom;
+    background-size: 100% auto;
+    bottom: 180px;
   }
 }

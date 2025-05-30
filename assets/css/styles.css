@@ -181,7 +181,7 @@ iframe::-webkit-scrollbar {
   position: relative;
   width: 100%;
   max-width: 450px;
-  padding: 45px 20px 16px 20px;
+  padding: 40px 20px 12px 20px;
 }
 .navigation.navigation--main:before {
   content: "";
@@ -215,8 +215,8 @@ iframe::-webkit-scrollbar {
   display: block;
   position: relative;
   width: 100%;
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.2;
 }
 .navigation ul li.have-arrow {
   position: relative;
@@ -228,10 +228,10 @@ iframe::-webkit-scrollbar {
   left: 50%;
   margin-left: -9px;
   top: 100%;
-  width: 18px;
-  height: 18px;
-  margin-top: -4px;
-  background: url("../img/svg/arrow_down.svg") no-repeat center center;
+  width: 14px;
+  height: 14px;
+  margin-top: -2px;
+  background: url("../img/svg/arrow_down.svg") no-repeat center center/cover;
 }
 .navigation ul li .button {
   width: 100%;
@@ -243,12 +243,12 @@ iframe::-webkit-scrollbar {
   gap: 20px;
   overflow: hidden;
   z-index: 1;
-  min-height: 55px;
+  min-height: 50px;
   justify-content: center;
   align-items: center;
   align-content: center;
   position: relative;
-  font-size: 35px;
+  font-size: 28px;
   line-height: 1;
   color: var(--white);
   font-family: var(--bold);
@@ -272,8 +272,8 @@ iframe::-webkit-scrollbar {
   min-width: 100%;
 }
 .button.small {
-  font-size: 28px;
-  min-height: 50px;
+  font-size: 24px;
+  min-height: 40px;
   padding: 10px 20px;
 }
 @media (max-width: 359px) {
@@ -286,7 +286,7 @@ iframe::-webkit-scrollbar {
 .title {
   display: inline-block;
   font-family: var(--bold);
-  font-size: 47px;
+  font-size: 38px;
   line-height: 1;
   text-align: center;
   color: var(--white);
@@ -421,20 +421,39 @@ iframe::-webkit-scrollbar {
 }
 
 .section--main {
-  margin-bottom: -110px;
+  margin-bottom: 0px;
   justify-content: flex-end;
-  max-width: 450px;
-  background: url("../img/main/bg.webp") no-repeat center bottom;
+  max-width: 100%;
+  background: linear-gradient(180deg, #0257aa 0%, #23a0f5 70%);
   background-size: 134% auto;
 }
 .section--main .title {
-  margin-top: 50px;
-  margin-bottom: 124%;
+  display: flex;
+  flex: 1;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 20px;
+  padding-bottom: 280px;
+}
+.section--main:before {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  position: absolute;
+  background: url("../img/main/bg.png") no-repeat center bottom;
+  background-size: 100% auto;
+  bottom: 180px;
 }
 
 .section--rules {
-  padding: 40px 10px 20px 10px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 12px;
   color: var(--white);
 }
 
@@ -447,7 +466,7 @@ iframe::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   align-content: center;
-  gap: 18px;
+  gap: 10px;
 }
 .rules > li {
   display: flex;
@@ -487,10 +506,10 @@ iframe::-webkit-scrollbar {
 }
 .rules > li:before {
   content: "";
-  width: 38px;
-  height: 52px;
+  width: 30px;
+  height: 40px;
   position: absolute;
-  bottom: -8px;
+  bottom: -4px;
   background: url("../img/svg/arrow_rules.svg") no-repeat center center;
   background-size: 100% 100%;
 }
@@ -498,7 +517,7 @@ iframe::-webkit-scrollbar {
   max-width: 262px;
   margin-right: auto;
   margin-left: 10px;
-  padding: 35px 13px 8px 8px;
+  padding: 14px 13px 8px 8px;
   background: url("../img/svg/rule1.svg") no-repeat center center;
   background-size: 100% 100%;
 }
@@ -507,18 +526,22 @@ iframe::-webkit-scrollbar {
   margin-left: 10px;
 }
 .rules > li:nth-child(2) {
-  max-width: 274px;
+  max-width: 254px;
   margin-left: auto;
   padding: 10px;
   background: url("../img/svg/rule2.svg") no-repeat center center;
   background-size: 100% 100%;
+}
+.rules > li:nth-child(2) img {
+  max-width: 154px;
+  height: 80px;
 }
 .rules > li:nth-child(2):before {
   right: 100%;
   transform: scaleX(-1);
 }
 .rules > li:nth-child(3) {
-  max-width: 209px;
+  max-width: 190px;
   margin-right: auto;
   margin-left: 10px;
   padding: 15px 62px 18px 18px;
@@ -532,10 +555,12 @@ iframe::-webkit-scrollbar {
 .rules > li:nth-child(3) img {
   position: absolute;
   right: 22px;
-  bottom: 8px;
+  bottom: 4px;
+  width: 50px;
+  height: 50px;
 }
 .rules > li:nth-child(4) {
-  padding: 20px 6px 10px 6px;
+  padding: 8px 6px 10px 6px;
   background: url("../img/svg/rule4.svg") no-repeat center center;
   background-size: 100% 100%;
 }
@@ -720,7 +745,7 @@ iframe::-webkit-scrollbar {
 
 .section--scores {
   max-width: 450px;
-  padding: 20px 16px 20px 16px;
+  padding: 16px;
 }
 @media (max-width: 359px) {
   .section--scores {
@@ -763,7 +788,7 @@ iframe::-webkit-scrollbar {
 }
 .scores th,
 .results th {
-  font-size: 12px;
+  font-size: 13px;
   padding: 6px 4px;
   opacity: 0.8;
 }
@@ -775,8 +800,8 @@ iframe::-webkit-scrollbar {
 }
 .scores td,
 .results td {
-  font-size: 13px;
-  padding: 6px 4px;
+  font-size: 12px;
+  padding: 5.5px 4px;
 }
 @media (max-width: 374px) {
   .scores td,
@@ -811,15 +836,15 @@ iframe::-webkit-scrollbar {
   display: inline-block;
   font-family: var(--regular);
   text-transform: none;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   text-transform: none;
   border-bottom: 1px solid var(--color);
 }
 
 .sound-button {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 32px;
   position: absolute;
   right: 0px;
