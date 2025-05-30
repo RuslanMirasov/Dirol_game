@@ -39,12 +39,19 @@
 
   th {
     font-size: 13px;
-    padding: 6px 4px;
+    padding: 5.5px 4px;
     opacity: 0.8;
+    @media (max-height: 649px) {
+      padding: 5px 4px;
+    }
   }
   td {
     font-size: 12px;
     padding: 5.5px 4px;
+    @media (max-height: 649px) {
+      padding: 5px 4px;
+      font-size: 11px;
+    }
   }
 }
 
