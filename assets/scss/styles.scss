@@ -13,11 +13,13 @@
   --grey: #f0f1f1;
   --red: #e6193a;
   --invalid: #ff002b;
+  --green: #5fad00;
 }
 
 @import 'mixins';
 @import 'fonts';
 @import 'reset';
+@import 'preloader';
 @import 'navigation';
 @import 'buttons';
 @import 'typography';

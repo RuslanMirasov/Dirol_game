@@ -51,3 +51,9 @@ export const startMillisecondTimer = () => {
 
   requestAnimationFrame(update);
 };
+
+// CКРЫВАЕМ PRELOADER
+export const hidePreloader = () => {
+  const preloader = document.querySelector('[data-preloader]');
+  if (preloader) preloader.classList.add('hidden');
+};
